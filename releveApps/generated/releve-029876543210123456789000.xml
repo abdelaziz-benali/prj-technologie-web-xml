@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<releve RIB="029876543210123456789000">
+   <dateReleve>2023-01-02</dateReleve>
+   <solde>30000.0</solde>
+   <operations dateDebut="2022-03-01" dateFin="2022-06-01">
+      <operation type="CREDIT" date="2022-03-15" montant="9000.0" description="virement reçu de 1"/>
+      <operation type="DEBIT" date="2022-03-15" montant="2000.0" description="Achat en ligne "/>
+      <operation type="CREDIT" date="2022-03-15" montant="12000.0" description="virement reçu de 2"/>
+      <operation type="DEBIT" date="2022-03-15" montant="4000.0" description="virement transmis à 3"/>
+      <operation type="CREDIT" date="2022-03-15" montant="15000.0" description="virement reçu de 4"/>
+   </operations>
+</releve>

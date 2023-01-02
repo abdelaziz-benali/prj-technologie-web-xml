@@ -3,7 +3,6 @@ package abenali.edu;
 import abenali.edu.model.Releve;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
-import jakarta.xml.bind.Marshaller;
 import jakarta.xml.bind.Unmarshaller;
 
 import java.io.File;
@@ -19,7 +18,7 @@ public class ReadFromXmlApp {
          */
         System.out.println("unmarshalling: xlm file -> java objects ... ");
         Unmarshaller unmarshaller=context.createUnmarshaller();
-        Releve relevefromXml=(Releve) unmarshaller.unmarshal(new File(loader.getResource("filestore/xml/from/releve-valid-with-xsd.xml").getFile()));
+        Releve relevefromXml=(Releve) unmarshaller.unmarshal(new File(loader.getResource("xml/releve.xml").getFile()));
         System.out.println(relevefromXml);
 
     }
