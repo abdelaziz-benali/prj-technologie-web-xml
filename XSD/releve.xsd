@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="releve">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="dateReleve"/>
+        <xs:element ref="solde"/>
+        <xs:element ref="operations"/>
+      </xs:sequence>
+      <xs:attribute name="RIB" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dateReleve" type="xs:date"/>
+  <xs:element name="solde" type="xs:integer"/>
+  <xs:element name="operations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="operation"/>
+      </xs:sequence>
+      <xs:attribute name="dateDebut" use="required" type="xs:date"/>
+      <xs:attribute name="dateFin" use="required" type="xs:date"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="operation">
+    <xs:complexType>
+      <xs:attribute name="date" use="required" type="xs:date"/>
+      <xs:attribute name="description" use="required"/>
+      <xs:attribute name="montant" use="required" type="xs:integer"/>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
